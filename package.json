@@ -1,0 +1,57 @@
+{
+	"name": "next-template",
+	"version": "0.0.0",
+	"private": true,
+	"dependencies": {
+		"@emotion/react": "11.9.3",
+		"@emotion/styled": "11.9.3",
+		"axios": "0.27.2",
+		"dotenv": "16.0.1",
+		"emotion-normalize": "11.0.1",
+		"emotion-reset": "3.0.1",
+		"formidable": "2.0.1",
+		"next": "12.1.6",
+		"nodemailer": "6.7.5",
+		"react": "18.2.0",
+		"react-dom": "18.2.0",
+		"react-toastify": "9.0.5"
+	},
+	"devDependencies": {
+		"@emotion/babel-plugin": "11.9.2",
+		"@next/bundle-analyzer": "12.1.6",
+		"@types/formidable": "^2.0.5",
+		"@types/node": "18.0.0",
+		"@types/nodemailer": "^6.4.4",
+		"@types/react": "18.0.14",
+		"@typescript-eslint/eslint-plugin": "5.29.0",
+		"@typescript-eslint/parser": "5.29.0",
+		"cross-env": "7.0.3",
+		"eslint-config-prettier": "8.5.0",
+		"eslint-plugin-jsx-a11y": "6.5.1",
+		"eslint-plugin-prettier": "4.0.0",
+		"eslint-plugin-react": "7.30.1",
+		"eslint-plugin-react-hooks": "4.6.0",
+		"husky": "8.0.1",
+		"lint-staged": "13.0.2",
+		"prettier": "2.7.1",
+		"typescript": "4.7.4"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"*": "prettier --write"
+	},
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start -p 3400",
+		"analyze": "cross-env ANALYZE=true next build",
+		"analyze:server": "cross-env BUNDLE_ANALYZE=server next build",
+		"analyze:browser": "cross-env BUNDLE_ANALYZE=browser next build",
+		"lint": "prettier --check .",
+		"format": "prettier --write ."
+	}
+}
